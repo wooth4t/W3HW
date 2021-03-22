@@ -7,28 +7,24 @@
 body {
   font-family: "Poiret One", cursive;
   font-weight: bold;
-  margin: 60px auto 0;
-  max-width: 1500px;
+  margin: 60px auto;
 }
 
-h1,
+h1, h2,
 h3 {
+  font-weight: bold;
   text-align: center;
 }
-
 h1 {
+  font-size: 48px;
+}
+h2 {
   font-size: 96px;
 }
-
-h2 {
-  font-size: 48px;
-  margin-top: 150px;
-  text-align: center;
-}
-
 h3 {
   font-size: var(--font-size-three);
   opacity: 0.7;
+  margin-bottom: 40px;
 }
 
 h4 {
@@ -36,21 +32,39 @@ h4 {
 }
 
 p {
-  background: var(--secondary-color);
-  padding: 20px;
   border-radius: 4px;
   font-size: 18px;
-  line-height: 1.5;
-  margin: 60px 0 40px 0;
-  text-align: center;
+  line-height: 1.2em;
 }
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  margin-bottom: 60px;
+}
+.pagetop {
+  margin-top: 130px;
+}
+.narrativelink {
+  max-width: 185px;
+}
+.weatherapplink {
+  max-width: 177px;
+}
+.yogurtlink {
+  max-width: 165px;
+}
+#contact {
+  margin-top: 60px;
+}
+
 
 .navigation-links {
   display: flex;
-  margin: 40px 0;
+  margin: 20px auto;
   justify-content: center;
 }
-
 .navigation-links a {
   margin: 20px;
   border-radius: 4px;
@@ -58,24 +72,57 @@ p {
   text-decoration: none;
   text-transform: capitalize;
 }
-
+.about-link {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
 .contact-link {
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
 }
 
-.about-link {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+}
+.imagecolumn {
+  padding: 0;
+}
+.projectdescription {
+  padding: 50px;
+  text-align: left;
+}
+.pagelink {
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  padding: 20px 15px;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.pagelink a {
+  color: white;
+  border: none;
 }
 
-.homepage-link {
-  color: var(--primary-color);
-  text-align: center;
-  display: block;
-}
 
+.projectimages {
+  margin: 30px auto;
+}
+.footer {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  left: 0;
+  right: 0;
+  margin-top: 120px;
+  padding: 100px 20px 20px 20px;
+  position: absolute;
+  width: 100%;
+}
 .email-link {
   display: flex;
   justify-content: center;
@@ -83,87 +130,68 @@ p {
   font-size: var(--font-size-three);
   text-decoration: none;
 }
-
 .email-link:hover {
   text-decoration: underline;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  margin-bottom: 60px;
-}
 
-.projectimage {
-  height: auto;
-  margin: 0 auto;
-}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 85px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .pagetop {
+    margin-top: 100px;
+  }
+  .navigation-links {
+    margin: 20px auto;
+  }
+  .navigation-links a {
+    margin: 10px;
+  }
 
-.projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+  .projects {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+  }
+  .pimage {
+    display: none;
+  }
+  .projectdescription {
+    padding: 0px;
+    text-align: center;
+    max-width: 100%;
+    column-width: 100%;
+    margin: 20px auto;
+  }
+  .pagelink {
+    display: block;
+    margin: 0 auto;
+  }
 
-#contact {
-  margin-top: 60px;
-}
+  #about {
+    font-size: 75px;
+  }
+  #contact {
+    font-size: 50px;
+  }
+  .footer {
+    margin-top: 60px;
+    padding: 60px 10px 10px 10px;
+    }
+  h5 {
+    font-size: 16px;
+  }
 
-.projectdescription {
-  text-align: left;
-}
-
-.narrativelink {
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  border-radius: 4px;
-  padding: 20px 15px;
-  margin: 20px 0;
-  max-width: 185px;
-  text-transform: capitalize;
-}
-
-.narrativelink a {
-  color: white;
-  border: none;
-}
-
-.weatherapplink {
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  border-radius: 4px;
-  padding: 20px 15px;
-  margin: 20px 0;
-  max-width: 177px;
-  text-transform: capitalize;
-}
-
-.weatherapplink a {
-  color: white;
-  border: none;
-}
-
-.yogurtlink {
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  border-radius: 4px;
-  padding: 20px 15px;
-  margin: 20px 0;
-  max-width: 165px;
-  text-transform: capitalize;
-}
-
-.yogurtlink a {
-  color: white;
-  border: none;
-}
-
-.footer {
-  background: var(--secondary-color);
-  left: 0;
-  right: 0;
-  margin: 150px 0 0 0;
-  padding: 100px 20px 20px 20px;
-  position: absolute;
-  width: 100%;
 }
